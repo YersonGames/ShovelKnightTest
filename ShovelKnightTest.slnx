@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ShovelKnightTest/ShovelKnightTest.vcxproj" Id="831a9044-a5fd-4e20-8e52-3fe55c355e16" />
+</Solution>
