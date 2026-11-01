@@ -1,4 +1,5 @@
 #include <raylib.h>
+#include "Game.h"
 
 int main()
 {
@@ -6,9 +7,15 @@ int main()
 	SetTargetFPS(60);
 	SetExitKey(0);
 
+	Game game;
+
 	while (!WindowShouldClose())
 	{
+		game.Update();
 		BeginDrawing();
+
+		game.Draw();
+
 		EndDrawing();
 	}
 
