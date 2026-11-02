@@ -9,10 +9,11 @@ Player::Player(Vector2 getPosition, Vector2 getSize)
 
 void Player::Update()
 {
-	if (IsKeyDown(KEY_W)){position.y -= 5;}
-	if (IsKeyDown(KEY_S)) { position.y += 5; }
-	if (IsKeyDown(KEY_A)) { position.x -= 5; }
-	if (IsKeyDown(KEY_D)) { position.x += 5; }
+	hmove = IsKeyDown(KEY_D) - IsKeyDown(KEY_A);
+	vmove += gravity;
+
+	position.x += speed * hmove;
+	position.y += vmove;
 
 }
 
