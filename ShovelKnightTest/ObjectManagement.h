@@ -4,6 +4,8 @@
 #include <raylib.h>
 
 #include "Player.h"
+#include "AssetManagement.h"
+#include "GameTextures.h"
 
 class ObjectManagement
 {
@@ -12,7 +14,7 @@ private:
 public:
 	ObjectManagement();
 	void Update();
-	void Draw();
+	void Draw(GameTextures& getGameTextures);
 
 	//Player
 	void CreatePlayer(Vector2 getPosition, Vector2 getSize);

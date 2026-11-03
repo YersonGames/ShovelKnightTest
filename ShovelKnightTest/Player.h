@@ -1,6 +1,7 @@
 #pragma once
 
 #include <raylib.h>
+#include "GameTextures.h"
 class Player
 {
 private:
@@ -15,7 +16,7 @@ private:
 public:
 	Player(Vector2 getPosition, Vector2 getSize);
 	void Update();
-	void Draw();
+	void Draw(GameTextures& getGameTextures);
 
 	//Getters
 	bool GetDestroy();

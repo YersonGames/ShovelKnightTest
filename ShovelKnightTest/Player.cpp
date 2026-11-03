@@ -17,9 +17,10 @@ void Player::Update()
 
 }
 
-void Player::Draw()
+void Player::Draw(GameTextures& getGameTextures)
 {
-	DrawRectangle(position.x, position.y, size.x, size.y, RED);
+	//DrawRectangle(position.x, position.y, size.x, size.y, RED);
+	DrawTexture(getGameTextures.texPlayer,position.x,position.y,WHITE);
 }
 
 //Getters

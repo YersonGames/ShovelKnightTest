@@ -2,6 +2,7 @@
 
 Game::Game()
 {
+	assetManagement.LoadGameTextures();
 	objectManagement.CreatePlayer({ 0,0 }, { 32,32 });
 }
 
@@ -18,5 +19,5 @@ void Game::Update()
 
 void Game::Draw()
 {
-	objectManagement.Draw();
+	objectManagement.Draw(assetManagement.GetGameTextures());
 }

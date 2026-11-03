@@ -2,7 +2,6 @@
 
 ObjectManagement::ObjectManagement()
 {
-	
 }
 
 void ObjectManagement::Update()
@@ -23,12 +22,12 @@ void ObjectManagement::Update()
 	}
 }
 
-void ObjectManagement::Draw()
+void ObjectManagement::Draw(GameTextures& getGameTextures)
 {
 	//Draw Player
 	for (auto player = objPlayer.begin(); player != objPlayer.end(); player++)
 	{
-		player->Draw();
+		player->Draw(getGameTextures);
 	}
 }
 
