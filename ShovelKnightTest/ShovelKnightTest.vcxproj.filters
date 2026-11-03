@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de encabezado\Managers">
+      <UniqueIdentifier>{be296e05-7b53-4654-9929-4fa811f42cb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Managers">
+      <UniqueIdentifier>{0e43038b-8914-4646-bb38-c4db2fa1cedb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Entities">
+      <UniqueIdentifier>{8e5b4692-b476-4423-93f0-b1b243f32c6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Entities">
+      <UniqueIdentifier>{63f785b9-5833-4428-b2b1-173a1f3175d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\structs">
+      <UniqueIdentifier>{a39e3005-bcf3-4f92-8ebe-d37e4fac5fa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\others">
+      <UniqueIdentifier>{738aaf17-f6f7-4aea-9e14-981eed200768}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -24,28 +42,37 @@
     <ClCompile Include="Game.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="AssetManagement.cpp">
+      <Filter>Archivos de origen\Managers</Filter>
+    </ClCompile>
     <ClCompile Include="ObjectManagement.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Managers</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Entities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="AssetManagement.h">
+      <Filter>Archivos de encabezado\Managers</Filter>
+    </ClInclude>
     <ClInclude Include="ObjectManagement.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Managers</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTextures.h">
+      <Filter>Archivos de encabezado\structs</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\others</Filter>
     </ClInclude>
     <ClInclude Include="utils.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\others</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
