@@ -144,13 +144,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssetManagement.cpp" />
+    <ClCompile Include="BlockCollider.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjectManagement.cpp" />
+    <ClCompile Include="ObjectTemplate.h" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssetManagement.h" />
+    <ClInclude Include="BlockCollider.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameTextures.h" />
     <ClInclude Include="ObjectManagement.h" />

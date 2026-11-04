@@ -4,6 +4,8 @@ Game::Game()
 {
 	assetManagement.LoadGameTextures();
 	objectManagement.CreatePlayer({ 0,0 }, { 32,32 });
+	objectManagement.CreateBlockCollider({ 0,128 },{128,32});
+	objectManagement.CreateBlockCollider({ 128,96 }, { 128,32 });
 }
 
 void Game::Update()

@@ -31,6 +31,12 @@
     <Filter Include="Archivos de encabezado\others">
       <UniqueIdentifier>{738aaf17-f6f7-4aea-9e14-981eed200768}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de encabezado\Collider">
+      <UniqueIdentifier>{db7f4c02-de23-4a48-b9d6-456abf9c41ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Collider">
+      <UniqueIdentifier>{42ecf022-71f7-4956-a266-d1b2925f4b79}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -50,6 +56,12 @@
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Archivos de origen\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockCollider.cpp">
+      <Filter>Archivos de origen\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectTemplate.h">
+      <Filter>Archivos de encabezado\others</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="utils.h">
       <Filter>Archivos de encabezado\others</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockCollider.h">
+      <Filter>Archivos de encabezado\Collider</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
