@@ -21,15 +21,15 @@ public:
 	void Draw(GameTextures& getGameTextures);
 
 	//Player
-	void CreatePlayer(Vector2 getPosition, Vector2 getSize) { objPlayer.push_back(Player(getPosition, getSize)); }
+	void CreatePlayer(Vector2 getPosition, Vector2 getSize) { objPlayer.emplace_back(Player(getPosition, getSize)); }
 	void ClearPlayer() {objPlayer.clear(); objPlayer.shrink_to_fit();}
 
 	//BlockCollider
-	void CreateBlockCollider(Vector2 getPosition, Vector2 getSize) { objBlockCollider.push_back(BlockCollider(getPosition, getSize)); }
+	void CreateBlockCollider(Vector2 getPosition, Vector2 getSize) { objBlockCollider.emplace_back(BlockCollider(getPosition, getSize)); }
 	void ClearBlockCollider() { objBlockCollider.clear(); objBlockCollider.shrink_to_fit(); }
 
 	//Hitbox
-	void CreateHitbox(Vector2 getPosition, Vector2 getSize, float getTimer) { objHitbox.push_back(Hitbox(getPosition, getSize, getTimer)); }
+	void CreateHitbox(Vector2 getPosition, Vector2 getSize, float getTimer) { objHitbox.emplace_back(Hitbox(getPosition, getSize, getTimer)); }
 	void ClearHitbox() { objHitbox.clear(); objHitbox.shrink_to_fit(); }
 };
 

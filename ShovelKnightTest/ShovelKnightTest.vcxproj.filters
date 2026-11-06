@@ -63,6 +63,9 @@
     <ClCompile Include="ObjectTemplate.h">
       <Filter>Archivos de encabezado\others</Filter>
     </ClCompile>
+    <ClCompile Include="Hitbox.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -88,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="BlockCollider.h">
       <Filter>Archivos de encabezado\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Hitbox.h">
+      <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
