@@ -20,6 +20,7 @@ void Game::Update()
 	if (IsKeyPressed(KEY_KP_2)) { assetManagement.UnloadGameTextures(); }
 	if (IsKeyPressed(KEY_KP_3)) { assetManagement.LoadGameTextures(); }
 	if (IsKeyPressed(KEY_KP_4)) { objectManagement.CreateHitbox({ 0,32 }, { 64,64 }, GetRandomValue(1,5)); }
+	if (IsKeyPressed(KEY_KP_5)) { objectManagement.CreateHitboxPlayerAttack1({ 0,32 }, { 64,64 }, GetRandomValue(1, 5)); }
 #endif	
 }
 

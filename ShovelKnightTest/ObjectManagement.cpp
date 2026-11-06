@@ -39,13 +39,13 @@ void ObjectManagement::Update()
 	//Update Hitbox
 	for (auto obj = objHitbox.begin(); obj != objHitbox.end();)
 	{
-		if (obj->GetDestroy())
+		if ((*obj)->GetDestroy())
 		{
 			obj = objHitbox.erase(obj);
 		}
 		else
 		{
-			obj->Update();
+			(*obj)->Update();
 			obj++;
 		}
 
@@ -69,6 +69,6 @@ void ObjectManagement::Draw(GameTextures& getGameTextures)
 	//Draw Hitbox
 	for (auto obj = objHitbox.begin(); obj != objHitbox.end(); obj++)
 	{
-		obj->Draw();
+		(*obj)->Draw();
 	}
 }

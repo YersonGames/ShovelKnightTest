@@ -1,10 +1,11 @@
 #pragma once
 
 #include <raylib.h>
+#include "HitboxType.h"
 
 class Hitbox
 {
-private:
+protected:
 	bool destroy = false;
 
 	Vector2 position;
@@ -12,12 +13,22 @@ private:
 	float timer;
 public:
 	Hitbox(Vector2 getPosition, Vector2 getSize, float getTimer);
-	void Update();
-	void Draw();
+	virtual void Update();
+	virtual void Draw();
 
 	//Getters
-	bool GetDestroy() { return destroy; }
+	virtual bool GetDestroy() { return destroy; }
 	Vector2 GetPosition() { return position; }
 	Vector2 GetSize() { return size; }
+
+	virtual HitboxType GetHitboxType() { return HitboxType::Hitbox; }
 };
 
+class HitboxPlayerAttack1 : public Hitbox
+{
+public:
+	using Hitbox::Hitbox;
+	void Draw() override;
+
+	HitboxType GetHitboxType() override { return HitboxType::HitboxPlayerAttack1; }
+};

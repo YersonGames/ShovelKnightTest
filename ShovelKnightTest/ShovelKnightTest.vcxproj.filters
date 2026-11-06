@@ -37,6 +37,15 @@
     <Filter Include="Archivos de origen\Collider">
       <UniqueIdentifier>{42ecf022-71f7-4956-a266-d1b2925f4b79}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de encabezado\Hitbox">
+      <UniqueIdentifier>{b400e194-33ba-4858-b628-c035a9fc782b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Hitbox">
+      <UniqueIdentifier>{fbd80976-051b-4614-b9f0-5716f5895a5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\enums">
+      <UniqueIdentifier>{f5a4ef0e-06a3-4dd3-89c5-7072e54c4b95}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -64,7 +73,7 @@
       <Filter>Archivos de encabezado\others</Filter>
     </ClCompile>
     <ClCompile Include="Hitbox.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Hitbox</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +102,10 @@
       <Filter>Archivos de encabezado\Collider</Filter>
     </ClInclude>
     <ClInclude Include="Hitbox.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Hitbox</Filter>
+    </ClInclude>
+    <ClInclude Include="HitboxType.h">
+      <Filter>Archivos de encabezado\enums</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

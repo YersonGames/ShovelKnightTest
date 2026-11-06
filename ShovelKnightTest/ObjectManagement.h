@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <raylib.h>
+#include <memory>
 
 #include "Player.h"
 #include "BlockCollider.h"
@@ -14,7 +15,7 @@ class ObjectManagement
 private:
 	std::vector<Player> objPlayer;
 	std::vector<BlockCollider> objBlockCollider;
-	std::vector<Hitbox> objHitbox;
+	std::vector<std::unique_ptr<Hitbox>> objHitbox;
 public:
 	ObjectManagement();
 	void Update();
@@ -29,7 +30,10 @@ public:
 	void ClearBlockCollider() { objBlockCollider.clear(); objBlockCollider.shrink_to_fit(); }
 
 	//Hitbox
-	void CreateHitbox(Vector2 getPosition, Vector2 getSize, float getTimer) { objHitbox.emplace_back(Hitbox(getPosition, getSize, getTimer)); }
+	void CreateHitbox(Vector2 getPosition, Vector2 getSize, float getTimer) { objHitbox.emplace_back(std::make_unique<Hitbox>(getPosition, getSize, getTimer)); }
 	void ClearHitbox() { objHitbox.clear(); objHitbox.shrink_to_fit(); }
+
+	//HitboxPlayerAttack1
+	void CreateHitboxPlayerAttack1(Vector2 getPosition, Vector2 getSize, float getTimer) { objHitbox.emplace_back(std::make_unique<HitboxPlayerAttack1>(getPosition, getSize, getTimer)); }
 };
 

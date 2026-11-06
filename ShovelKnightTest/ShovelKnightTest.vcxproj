@@ -159,6 +159,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameTextures.h" />
     <ClInclude Include="Hitbox.h" />
+    <ClInclude Include="HitboxType.h" />
     <ClInclude Include="ObjectManagement.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
