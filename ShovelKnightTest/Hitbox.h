@@ -15,8 +15,6 @@ public:
 	void Update();
 	void Draw();
 
-	void Destroy() { destroy = true; }
-
 	//Getters
 	bool GetDestroy() { return destroy; }
 	Vector2 GetPosition() { return position; }

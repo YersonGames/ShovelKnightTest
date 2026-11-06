@@ -13,4 +13,8 @@ void BlockCollider::Update()
 void BlockCollider::Draw()
 {
 	DrawRectangle(position.x, position.y, size.x, size.y, BLACK);
+
+#ifdef _DEBUG
+	DrawRectangleLines(position.x, position.y, size.x, size.y, RED);
+#endif
 }

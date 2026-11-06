@@ -11,7 +11,7 @@ void ObjectManagement::Update()
 	{
 		if (obj->GetDestroy())
 		{
-			objPlayer.erase(obj);
+			obj = objPlayer.erase(obj);
 		}
 		else
 		{
@@ -26,7 +26,7 @@ void ObjectManagement::Update()
 	{
 		if (obj->GetDestroy())
 		{
-			objBlockCollider.erase(obj);
+			obj = objBlockCollider.erase(obj);
 		}
 		else
 		{
@@ -41,7 +41,7 @@ void ObjectManagement::Update()
 	{
 		if (obj->GetDestroy())
 		{
-			objHitbox.erase(obj);
+			obj = objHitbox.erase(obj);
 		}
 		else
 		{

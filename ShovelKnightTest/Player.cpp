@@ -57,8 +57,10 @@ void Player::Update(std::vector<BlockCollider>& objBlockCollider)
 
 void Player::Draw(GameTextures& getGameTextures)
 {
-	//DrawRectangle(position.x, position.y, size.x, size.y, RED);
 	DrawTexture(getGameTextures.texPlayer,position.x,position.y,WHITE);
 
-	DrawText(TextFormat("%i", jump), 0, 0, 16, BLACK);
+#ifdef _DEBUG
+	DrawText(TextFormat("%i", jump), position.x, position.y-16, 16, BLACK);
+	DrawRectangleLines(position.x, position.y, size.x, size.y, LIME);
+#endif
 }

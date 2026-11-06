@@ -1,4 +1,5 @@
 #include <raylib.h>
+#include <iostream>
 #include "Game.h"
 
 int main()
@@ -6,6 +7,7 @@ int main()
 	InitWindow(400,240,"Shovel Knight");
 	SetTargetFPS(60);
 	SetExitKey(0);
+
 
 	Game game;
 

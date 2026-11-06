@@ -12,11 +12,15 @@ void Game::Update()
 {
 	objectManagement.Update();
 
-	//test
-	if (IsKeyPressed(KEY_SPACE)) { objectManagement.CreatePlayer({ 32,32 }, { 32,32 }); }
-	if (IsKeyPressed(KEY_C)) { objectManagement.ClearPlayer(); }
-
 	ClearBackground(WHITE);
+
+#ifdef _DEBUG
+	if (IsKeyPressed(KEY_KP_0)) { objectManagement.CreatePlayer({ 32,32 }, { 32,32 }); }
+	if (IsKeyPressed(KEY_KP_1)) { objectManagement.ClearPlayer(); }
+	if (IsKeyPressed(KEY_KP_2)) { assetManagement.UnloadGameTextures(); }
+	if (IsKeyPressed(KEY_KP_3)) { assetManagement.LoadGameTextures(); }
+	if (IsKeyPressed(KEY_KP_4)) { objectManagement.CreateHitbox({ 0,32 }, { 64,64 }, GetRandomValue(1,5)); }
+#endif	
 }
 
 void Game::Draw()
