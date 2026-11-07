@@ -72,3 +72,7 @@ void ObjectManagement::Draw(GameTextures& getGameTextures)
 		(*obj)->Draw();
 	}
 }
+
+void ObjectManagement::DrawGUI(GameTextures& getGameTextures)
+{
+}

@@ -21,5 +21,8 @@ public:
 	//Getters
 	Camera2D& GetCamera() { return camera; }
 	Vector2 GetCameraPos() { return camera.target; }
+	Vector2 GetCameraOff() { return camera.offset; }
+	float GetCameraZoom() { return camera.zoom; }
+	float GetCameraRot() { return camera.rotation; }
 };
 

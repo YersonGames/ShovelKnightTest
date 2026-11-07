@@ -20,6 +20,7 @@ public:
 	ObjectManagement();
 	void Update();
 	void Draw(GameTextures& getGameTextures);
+	void DrawGUI(GameTextures& getGameTextures);
 
 	//Player
 	void CreatePlayer(Vector2 getPosition, Vector2 getSize) { objPlayer.emplace_back(Player(getPosition, getSize)); }

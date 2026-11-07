@@ -34,4 +34,5 @@ void Game::Draw()
 	BeginMode2D(cameraSystem.GetCamera());
 		objectManagement.Draw(assetManagement.GetGameTextures());
 	EndMode2D();
+	objectManagement.DrawGUI(assetManagement.GetGameTextures());
 }
