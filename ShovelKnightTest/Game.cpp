@@ -21,10 +21,17 @@ void Game::Update()
 	if (IsKeyPressed(KEY_KP_3)) { assetManagement.LoadGameTextures(); }
 	if (IsKeyPressed(KEY_KP_4)) { objectManagement.CreateHitbox({ 0,32 }, { 64,64 }, GetRandomValue(1,5)); }
 	if (IsKeyPressed(KEY_KP_5)) { objectManagement.CreateHitboxPlayerAttack1({ 0,32 }, { 64,64 }, GetRandomValue(1, 5)); }
+
+	if (IsKeyDown(KEY_UP)) { cameraSystem.SetCameraPos({ cameraSystem.GetCameraPos().x,cameraSystem.GetCameraPos().y-5 }); }
+	if (IsKeyDown(KEY_DOWN)) { cameraSystem.SetCameraPos({ cameraSystem.GetCameraPos().x,cameraSystem.GetCameraPos().y + 5 }); }
+	if (IsKeyDown(KEY_LEFT)) { cameraSystem.SetCameraPos({ cameraSystem.GetCameraPos().x - 5,cameraSystem.GetCameraPos().y }); }
+	if (IsKeyDown(KEY_RIGHT)) { cameraSystem.SetCameraPos({ cameraSystem.GetCameraPos().x + 5,cameraSystem.GetCameraPos().y }); }
 #endif	
 }
 
 void Game::Draw()
 {
-	objectManagement.Draw(assetManagement.GetGameTextures());
+	BeginMode2D(cameraSystem.GetCamera());
+		objectManagement.Draw(assetManagement.GetGameTextures());
+	EndMode2D();
 }

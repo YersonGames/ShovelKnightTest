@@ -107,6 +107,9 @@
     <ClInclude Include="HitboxType.h">
       <Filter>Archivos de encabezado\enums</Filter>
     </ClInclude>
+    <ClInclude Include="CameraSystem.h">
+      <Filter>Archivos de encabezado\others</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ShovelKnightTest.rc">

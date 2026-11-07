@@ -156,6 +156,7 @@
   <ItemGroup>
     <ClInclude Include="AssetManagement.h" />
     <ClInclude Include="BlockCollider.h" />
+    <ClInclude Include="CameraSystem.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameTextures.h" />
     <ClInclude Include="Hitbox.h" />
