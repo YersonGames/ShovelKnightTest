@@ -12,6 +12,8 @@ void Player::Update(std::vector<BlockCollider>& objBlockCollider)
 	vmove += gravity;
 	jump = false;
 
+	if (hmove != 0) { texScaleX = hmove; }
+
 	//Jump
 	for (auto obj : objBlockCollider)
 	{
@@ -48,8 +50,6 @@ void Player::Update(std::vector<BlockCollider>& objBlockCollider)
 		}
 	}
 
-	
-
 	position.x += speed * hmove;
 	position.y += vmove;
 
@@ -57,7 +57,9 @@ void Player::Update(std::vector<BlockCollider>& objBlockCollider)
 
 void Player::Draw(GameTextures& getGameTextures)
 {
-	DrawTexture(getGameTextures.texPlayer,position.x,position.y,WHITE);
+	Rectangle srcrec = { 0,0,getGameTextures.texPlayer.width*texScaleX,getGameTextures.texPlayer.height };
+	Rectangle dstrec = { position.x+7,position.y+9,getGameTextures.texPlayer.width,getGameTextures.texPlayer.height };
+	DrawTexturePro(getGameTextures.texPlayer, srcrec, dstrec, { 128,98 }, 0.0f, WHITE);
 
 #ifdef _DEBUG
 	DrawText(TextFormat("%i", jump), position.x, position.y-16, 16, BLACK);

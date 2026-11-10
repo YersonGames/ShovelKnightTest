@@ -1,18 +1,16 @@
 #include "Game.h"
+#include "Level1.h"
 
 Game::Game()
 {
 	assetManagement.LoadGameTextures();
-	objectManagement.CreatePlayer({ 0,0 }, { 32,32 });
-	objectManagement.CreateBlockCollider({ 0,128 },{128,32});
-	objectManagement.CreateBlockCollider({ 128,96 }, { 128,32 });
+	objectManagement.CreatePlayer({ 0,0 }, { 14,24 });
+	levelManagement.LoadLevel(objectManagement, LoadL1Z1());
 }
 
 void Game::Update()
 {
 	objectManagement.Update();
-
-	ClearBackground(WHITE);
 
 #ifdef _DEBUG
 	if (IsKeyPressed(KEY_KP_0)) { objectManagement.CreatePlayer({ 32,32 }, { 32,32 }); }
@@ -31,6 +29,7 @@ void Game::Update()
 
 void Game::Draw()
 {
+	ClearBackground(WHITE);
 	BeginMode2D(cameraSystem.GetCamera());
 		objectManagement.Draw(assetManagement.GetGameTextures());
 	EndMode2D();

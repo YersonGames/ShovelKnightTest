@@ -18,6 +18,7 @@ private:
 	float vmove = 0;
 	float speed = 5;
 	float gravity = 0.3;
+	int texScaleX = 1;
 public:
 	Player(Vector2 getPosition, Vector2 getSize);
 	void Update(std::vector<BlockCollider>& objBlockCollider);

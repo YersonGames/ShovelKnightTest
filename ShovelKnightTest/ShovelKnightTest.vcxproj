@@ -148,6 +148,7 @@
     <ClCompile Include="BlockCollider.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Hitbox.cpp" />
+    <ClCompile Include="LevelManagement.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjectManagement.cpp" />
     <ClCompile Include="ObjectTemplate.h" />
@@ -161,6 +162,8 @@
     <ClInclude Include="GameTextures.h" />
     <ClInclude Include="Hitbox.h" />
     <ClInclude Include="HitboxType.h" />
+    <ClInclude Include="Level1.h" />
+    <ClInclude Include="LevelManagement.h" />
     <ClInclude Include="ObjectManagement.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
