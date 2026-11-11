@@ -4,7 +4,7 @@
 Game::Game()
 {
 	assetManagement.LoadGameTextures();
-	objectManagement.CreatePlayer({ 0,0 }, { 14,24 });
+	objectManagement.CreatePlayer({ 0,0 });
 	levelManagement.LoadLevel(objectManagement, LoadL1Z1());
 }
 
@@ -13,7 +13,7 @@ void Game::Update()
 	objectManagement.Update();
 
 #ifdef _DEBUG
-	if (IsKeyPressed(KEY_KP_0)) { objectManagement.CreatePlayer({ 32,32 }, { 32,32 }); }
+	if (IsKeyPressed(KEY_KP_0)) { objectManagement.CreatePlayer({ 32,32 }); }
 	if (IsKeyPressed(KEY_KP_1)) { objectManagement.ClearPlayer(); }
 	if (IsKeyPressed(KEY_KP_2)) { assetManagement.UnloadGameTextures(); }
 	if (IsKeyPressed(KEY_KP_3)) { assetManagement.LoadGameTextures(); }

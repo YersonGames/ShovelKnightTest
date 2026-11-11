@@ -13,14 +13,14 @@ private:
 	bool jump = false;
 
 	Vector2 position;
-	Vector2 size;
+	Vector2 size = { 14,24 };
 	float hmove;
 	float vmove = 0;
 	float speed = 5;
 	float gravity = 0.3;
 	int texScaleX = 1;
 public:
-	Player(Vector2 getPosition, Vector2 getSize);
+	Player(Vector2 getPosition);
 	void Update(std::vector<BlockCollider>& objBlockCollider);
 	void Draw(GameTextures& getGameTextures);
 

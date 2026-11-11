@@ -1,9 +1,8 @@
 #include "Player.h"
 
-Player::Player(Vector2 getPosition, Vector2 getSize)
+Player::Player(Vector2 getPosition)
 {
 	position = getPosition;
-	size = getSize;
 }
 
 void Player::Update(std::vector<BlockCollider>& objBlockCollider)
